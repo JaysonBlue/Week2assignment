@@ -1,0 +1,106 @@
+/* Reset body margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Set the yellow background color for the entire page */
+body {
+    background-color: #FCA5A5;  /* Light red background */
+    display: block;              /* Remove flexbox */
+}
+
+/* Container for the smaller squares */
+.squares-container {
+    position: absolute;
+    top: 50px;                  
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+}
+
+/* Style for the squares */
+.square {
+    width: 61px;
+    height: 57px;
+}
+
+/* Style for the center rectangle */
+.center-rectangle {
+    width: 400px;
+    height: 250px;
+    background: #3A4C6D;
+    position: absolute;
+    top: 200px;                  /* Center the rectangle at top: 200px */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Style for the poem text inside the rectangle */
+.poem-text {
+    position: absolute;
+    top: 220px;                  /* Position the poem within the rectangle */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+}
+
+/* Place "test" and "also a test" below the rectangle */
+.text-container {
+    position: absolute;           /* Use absolute positioning */
+    top: 460px;                   /* Move below the center rectangle (top of the rectangle is 200px, so add 250px height + some gap) */
+    left: 50%;
+    transform: translateX(-50%);  /* Center the text horizontally */
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: 400;
+    color: black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Highlight "also a test" */
+.highlight-text {
+    background-color: yellow;
+    padding: 3px;
+    display: inline;
+}
+
+/* Style for the new rectangle */
+.new-rectangle {
+    width: 400px;
+    height: 250px;
+    background: #EFEAB9;  /* New color */
+    position: absolute;
+    top: 550px;  /* Adjust to make space below the image */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Position the Mimikyu image above the new rectangle */
+img {
+    position: absolute;   /* Allows precise positioning */
+    top: 525px;           /* Position it above the new rectangle */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;           /* Ensure it appears on top of other elements */
+}
+
+/* Style for "AME 220 Week 2" text */
+.ame-text {
+    position: absolute;
+    top: 160px;  /* Adjust this to position it correctly */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
